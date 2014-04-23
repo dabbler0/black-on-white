@@ -138,7 +138,7 @@ game = new Phaser.Game 800, 600, Phaser.AUTO, 'black-on-white', (->
         else
           drop = blackDrops.create Math.random() * 800, 0, 'black-drop'
 
-        drop.body.velocity.setTo 0, Math.random() * 100 + 100
+        drop.body.velocity.setTo 0, Math.random() * 100 + 100 * Math.log 2 + score
         drop.outOfBoundsKill = true
       ), this
 

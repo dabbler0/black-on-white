@@ -134,7 +134,7 @@
           } else {
             drop = blackDrops.create(Math.random() * 800, 0, 'black-drop');
           }
-          drop.body.velocity.setTo(0, Math.random() * 100 + 100);
+          drop.body.velocity.setTo(0, Math.random() * 100 + 100 * Math.log(2 + score));
           return drop.outOfBoundsKill = true;
         }), this);
         return gameOver = false;
